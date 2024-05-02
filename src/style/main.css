@@ -1,33 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
-:root{
-  --container-size: 940px
+:root {
+  --container-size: 940px;
 }
 
 body {
-    font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
-.header, .visual, .main, .slogan, .footer{
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
   width: var(--container-size, 940px);
   margin: 0 auto;
 }
 /* 헤더 */
-.header{
+.header {
   background-color: yellow;
+  height: 10vh;
 }
 /* 비주얼 */
-.visual{
+.visual {
   background-color: pink;
+  height: 10vh;
 }
 /* 메인 */
-.main{
+.main {
+  display: flex;
+  flex-flow: row nowrap;
+  /* 위가 기본 속성 flex-direction/wrap 속성을 묶은 숏텐드 */
+  justify-content: flex-start; /* 메인 축(기본값 flex-start) */
+  align-items: stretch; /* 교차 축(기본값 stretch) */
   background-color: skyblue;
+  height: 60vh;
+}
+.group{
+  border: 1px solid red;
 }
 /* 슬로건 */
-.slogan{
+.slogan {
   background-color: lime;
+  height: 10vh;
 }
 /* 푸터 */
-.footer{
+.footer {
   background-color: orange;
+}
+.footer-inner {
+  background: green;
+  height: 10vh;
 }
