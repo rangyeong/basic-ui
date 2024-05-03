@@ -4,16 +4,6 @@
   --container-size: 940px;
 }
 
-/* 버튼 스타일 */
-button, a{
-  display: inline-block;
-  width: 100px;
-  padding: 20px;
-  border: 1px solid currentColor;
-  border-radius: 10px;
-  height: 10px;
-}
-
 body {
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -36,19 +26,42 @@ body {
   background-color: pink;
   height: 10vh;
 }
-/* 메인 */
+/* 메인 콘텐츠 */
+
 .main {
   display: flex;
   flex-flow: row nowrap;
-  /* 위가 기본 속성 flex-direction/wrap 속성을 묶은 숏텐드 */
-  justify-content: flex-start; /* 메인 축(기본값 flex-start) */
-  align-items: stretch; /* 교차 축(기본값 stretch) */
+  /* justify-content: space-between;
+  align-items: stretch;
+  padding: 28px 16px 36px ; */
   background-color: skyblue;
   height: 60vh;
 }
+
+.group-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
 .group{
   border: 1px solid red;
 }
+
+.group1{
+  width: 250px;
+  order: 1;
+}
+
+.group2{
+  width: 380px;
+}
+
+.group3{
+  width: 190px;
+  order: -1;
+}
+
 /* 슬로건 */
 .slogan {
   background-color: lime;
