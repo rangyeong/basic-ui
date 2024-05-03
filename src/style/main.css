@@ -17,10 +17,23 @@ body {
 }
 /* 헤더 */
 .header {
-  background-color: yellow;
-  height: 10vh;
+  position: relative;
+  height: 120px;
   padding: 0 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: blue;
+  /* border: 1px solid green; -> 알아보기 힘든 마크다운.. */
 }
+
+/* 로고 */
+.logo{
+  background-color: orange;
+  position: absolute;
+  top: 45px;
+  left: 60px;
+}
+
+
 /* 비주얼 */
 .visual {
   background-color: pink;
@@ -31,38 +44,50 @@ body {
 .main {
   display: flow-root;
   background-color: skyblue;
-  height: 60vh;
   min-height: 450px;
-  padding: 0 15px;
-}
-.group-wrapper{
-  float: right;
-  border: 1px solid green;
+  padding: 28px 16px 36px;
 }
 
 .group{
   border: 1px solid red;
-  margin: 0 15px;
+  float: left;
 }
 
 .group1{
+  width: 250px;
+  background-color: orange;
+}
+
+.group:nth-child(n+2){
+  margin-left: 44px;
+}
+.group2{
+  width: 380px;
+  background-color: silver;
+}
+
+.group3{
+  width: 190px;
+  background-color: hotpink;
+}
+/* .group:nth-child(1){
   width: 250px;
   float: left;
   background-color: orange;
 }
 
-.group2{
+.group:nth-child(2){
   width: 380px;
   float: left;
   background-color: silver;
   margin-right: 0;
 }
 
-.group3{
+.group:nth-child(3){
   width: 190px;
-  float: left;
+  float: right;
   background-color: hotpink;
-}
+} */
 
 /* 슬로건 */
 .slogan {
@@ -77,4 +102,22 @@ body {
 .footer-inner {
   background: green;
   height: 10vh;
+}
+
+/* flex를 지원하는 웹브라우저를 위한 스타일 */
+
+@supports(display: flex) {
+  .main{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+  }
+
+  .group:nth-child(n+2){
+    margin-left: 0;
+  }
+
+  .group3{
+    order: -1;
+  }
 }
