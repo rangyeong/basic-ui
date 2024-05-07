@@ -1,0 +1,38 @@
+/* 단위 */
+/* 절대단위 - px */
+/* 상대단위 - em(부모로부터 상속) */
+/* 상대단위 - rem(루트로부터 상속) */
+/* 상대단위 - % */
+
+html{
+  font-size: 10px;
+}
+body{
+    font-family: 'SUIT-Regular';
+}
+h1{
+  font-size: 60px;
+  font-style: italic;
+  /* font-style: normal; - 기본 속성 */
+  /* 피사의 사탑이 이텔릭체ㅋㅋ */
+  font-variant: small-caps;
+}
+/* 16*2 32px */
+div{
+  font-size: 1.5em;
+}
+p{
+  
+  font-size: 2rem;
+  line-height: 1;
+}
+
+
+
+
+/* viewport 크기 */
+@media (max-width: 767px) {
+  p{
+
+  }
+}
