@@ -1,0 +1,29 @@
+.box{
+  width: 500px;
+  height: 1000px;
+  inline-size: 500px;
+  block-size: 100px;
+  border: 20px dashed blue;
+  padding: 20px;
+  margin: 50px;
+  background: pink url(../../images/coffee.png) no-repeat 20% 30% /110px 83px scroll;
+  /* background-color: pink;
+  background-repeat: no-repeat;
+  background-position: 20% 30%; */
+  
+}
+
+.container{
+  width: 600px;
+  height: 300px;
+  inline-size: 600px;
+  block-size: 300px;
+  border: 1px solid red;
+  /* background-color: yellow; */
+  /* background-image: url(../../images/ani_flower_01.png), url(../../images/ani_flower_02.png); */
+  /* background-repeat: no-repeat, repeat; 멀티 배경 각각에 넣는 속성 값을 콤마로 연결해서 쓸 수 있음. 같은 그룹 속성은 공백으로 연결*/
+  /* background-repeat: no-repeat;
+  background-position: 0 0, 200px 100px; */
+  background: url(../../images/ani_flower_01.png) no-repeat 0 0, url(../../images/ani_flower_02.png) no-repeat 0 0 yellow;
+  /* background: url(../../images/ani_flower_01.png) no-repeat 0 0, yellow url(../../images/ani_flower_02.png) no-repeat 0 0 ; */
+}

@@ -1,0 +1,16 @@
+.sr-only, .ally-hidden, .readable-hidden{
+  /* 스크린리더에 읽히되 출력안 안보이게 하는 속성 모음 클래스 */
+  background: lightcoral;
+  position: absolute;
+  inline-size: 1px; /* = width: 1px; */
+  width: 1px;
+  block-size: 1px; /* = height: 1px; */
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0); /* 구형용 */
+  clip-path: polygon(0 0, 0 0, 0 0); /* 모던 브라우저 */
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+}

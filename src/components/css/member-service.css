@@ -1,0 +1,50 @@
+/* 텍스트 링크 모음 */
+
+/* 컴포넌트 */
+.member-service{
+  --font-size: 0.875rem;
+  /* 
+  14px을 주기 위해서 14(원하는 크기)/16(기본값)의 값을 rem 단위로 사용할 수도 있음.  */
+  font-family: var(--base-font-family);
+  font-size: 0;
+  list-style-type: none;
+  /* 불릿 안쓰겠다 */
+  padding-inline-start: 0;
+  /* padding-left의 논리값 */
+  margin: 0;
+  /* margin의 대표속성으로 0을 줌. */
+  text-align: right;
+
+
+  li{
+    display: inline-block;
+    /* inline은 크기를 자원하지 않음 크기를 주고 싶다면 inline-block값을 줘야함. */
+    font-size: var(--font-size);
+  }
+
+  a{
+    display: inherit;
+    /* li가 inline-block이니까 속성을 받아서 값을 주기(일일이 값을 지정하지 말고 상속값 유동적으로 사용하기 */
+    padding: 8px 8px 8px 4px;
+    font-variant: small-caps;
+    margin: 0;
+    text-transform: uppercase;
+    color: inherit;
+    /* a태그의 값을 일일히 지정하지 않고 부모 요소의 값을 상속받아서 에이전트 스타일을 없애도록 전처리 해두는 것. */
+    text-decoration: none;
+  }
+  /* a:link{
+    color: green;
+  }
+  a:visited{
+    color: silver;
+  }
+  a:active{
+    color: red;
+  }
+  a:hover, a:focus{
+    color: yellow;
+  } */
+}
+
+

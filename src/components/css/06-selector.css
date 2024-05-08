@@ -1,0 +1,7 @@
+/* 가상 요소 선택자 pseudo-element selector */
+.box::before{
+  content: '첫 번째 자식 요소';
+}
+.box::after{
+  content: '마지막 자식 요소';
+}
