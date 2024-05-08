@@ -1,11 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"); */
 
 :root {
   --container-size: 940px;
 }
 
+/* 기본 박스 사이징 설정 */
+*::before, *::after{
+  box-sizing: border-box;
+}
+
+/* 그라디언트 배경, 배경 이미지 */
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "SUIT-Variable", sans-serif;
+  /* background-color: #ccc; */
+  /* background-image: url(/images/bg_flower.png), linear-gradient(to bottom, #aaa 0% #ccc 30%, #eee 50%, #fff 100%); */
+  background-image: url(../images/bg_flower.png), linear-gradient(to bottom, #aaa 0% #ccc 30%, #eee 50%, #fff 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 0, 0 0;
 }
 
 .header,
@@ -19,7 +30,7 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: darkblue;
+  background-color: #fff;
   height: 120px;
   padding: 0 50px;
   border-radius: 0 0 15px 15px;
@@ -28,7 +39,7 @@ body {
 
 /* 로고 */
 .logo {
-  background-color: orange;
+  /* background-color: orange; */
   position: absolute;
   top: 45px;
   left: 60px;
@@ -36,12 +47,38 @@ body {
 
 /* 비주얼 */
 .visual {
-  background-color: pink;
-  height: 10vh;
+  position: relative;
+  height: 120px;block-size: 120px;
+  &::before, &::after{
+    content: "";
+    width: inherit;
+    inline-size: inherit;
+    height: inherit;
+    block-size: inherit;
+    /* inline요소임에도 너비 높이를 상송받아서 부모와 같은 크기를 가지게 함. */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+}
+.visual::before{
+  /* background-color: yellow; */
+  z-index: 1;
+  /* z-index의 기본은 0 */
+  background-image: url(../images/ani_flower_01.png), url(../images/ani_flower_02.png);
+  background-position: 0 0, 600px 10px;
+}
+.visual::after{
+  /* background-color: pink; */
+  z-index: 1;
+  /* z-index의 기본은 0 */
+  background-image: url(../images/ani_flower_03.png), url(../images/ani_flower_04.png);
+  background-position: 300px 0, 800px 30px;
 }
 /* 메인 콘텐츠 */
 .main {
-  background-color: skyblue;
+  background-color: #fff;
   display: flow-root;
   min-height: 450px;
   padding: 28px 16px 36px;
@@ -58,37 +95,37 @@ body {
 
 .group1 {
   width: 250px;
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 .group2 {
   width: 380px;
-  background: silver;
+  /* background: silver; */
 }
 
 .group3 {
-  background: hotpink;
+  /* background: hotpink; */
   width: 190px;
 }
 
 /* 슬로건 */
 .slogan {
-  background-color: lime;
+  /* background-color: lime; */
   height: 10vh;
   clear: both;
 }
 /* 푸터 */
 .footer {
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 .footer-inner {
-  background: yellow;
+  /* background: yellow; */
   height: 10vh;
 }
 
 /* -------------------------------------------------------------------------- */
-/*                          flex를 지원하는 웹브라우저를 위한 스타일                   */
+/*                          flex를 지원하는 웹브라우저를 위한 스타일             */
 /* -------------------------------------------------------------------------- */
 
 @supports (display: flex) {
@@ -103,129 +140,6 @@ body {
   }
 
   .group3 {
-    order: -1;
-  }
-}
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-
-:root {
-  --container-size: 940px;
-}
-
-body {
-  font-family: "Noto Sans KR", sans-serif;
-}
-.header,
-.visual,
-.main,
-.slogan,
-.footer-inner {
-  width: var(--container-size, 940px);
-  margin: 0 auto;
-}
-/* 헤더 */
-.header {
-  position: relative;
-  height: 120px;
-  padding: 0 50px;
-  border-radius: 0 0 15px 15px;
-  background-color: blue;
-  /* border: 1px solid green; -> 알아보기 힘든 마크다운.. */
-}
-
-/* 로고 */
-.logo{
-  background-color: orange;
-  position: absolute;
-  top: 45px;
-  left: 60px;
-}
-
-
-/* 비주얼 */
-.visual {
-  background-color: pink;
-  height: 10vh;
-}
-/* 메인 콘텐츠 */
-
-.main {
-  display: flow-root;
-  background-color: skyblue;
-  min-height: 450px;
-  padding: 28px 16px 36px;
-}
-
-.group{
-  border: 1px solid red;
-  float: left;
-}
-
-.group1{
-  width: 250px;
-  background-color: orange;
-}
-
-.group:nth-child(n+2){
-  margin-left: 44px;
-}
-.group2{
-  width: 380px;
-  background-color: silver;
-}
-
-.group3{
-  width: 190px;
-  background-color: hotpink;
-}
-/* .group:nth-child(1){
-  width: 250px;
-  float: left;
-  background-color: orange;
-}
-
-.group:nth-child(2){
-  width: 380px;
-  float: left;
-  background-color: silver;
-  margin-right: 0;
-}
-
-.group:nth-child(3){
-  width: 190px;
-  float: right;
-  background-color: hotpink;
-} */
-
-/* 슬로건 */
-.slogan {
-  background-color: lime;
-  height: 10vh;
-  clear: both;
-}
-/* 푸터 */
-.footer {
-  background-color: orange;
-}
-.footer-inner {
-  background: green;
-  height: 10vh;
-}
-
-/* flex를 지원하는 웹브라우저를 위한 스타일 */
-
-@supports(display: flex) {
-  .main{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content:space-between;
-  }
-
-  .group:nth-child(n+2){
-    margin-left: 0;
-  }
-
-  .group3{
     order: -1;
   }
 }
