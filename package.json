@@ -1,11 +1,10 @@
 {
   "scripts": {
-    "dev": "five-server"
-  },
-  "devDependencies": {
-    "five-server": "^0.3.3"
+    "dev": "five-server",
+    "clean": "rm -rf"
   },
   "dependencies": {
-    "add-gitignore": "^1.1.1"
+    "add-gitignore": "^1.1.1",
+    "five-server": "^0.3.3"
   }
 }

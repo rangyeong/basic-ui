@@ -1,0 +1,20 @@
+
+
+:root{
+  --base-font-family: "SUIT Variable", sans-serif; 
+}
+
+/* 
+*, *::before, *::after{
+  box-sizing: border-box;
+} 
+더 세분화 하는 게 밑의 방법
+*/
+body *, body *::before, body *::after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--base-font-family);
+  line-height: 1.15;
+}
