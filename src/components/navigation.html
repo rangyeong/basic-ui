@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네비게이션</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/components/css/navigation.css" />
+  </head>
+  <body>
+    <h1 class="sr-only">네비게이션</h1>
+    <header class="header">
+        <!-- 로고 - 콘텐츠 이미지 -->
+  
+        <h1 class="logo">
+          <a href="/" class="logo-link">
+            <img src="/images/logo.png" alt="웹카페" />
+          </a>
+        </h1>
+    <nav class="navigation">
+      <h2 class="sr-only" id="navigationTitle">메인메뉴</h2>
+      <ul role="group" aria-labelledby="navigationTitle"  class="nav-main">
+        <li role="none">
+          <button type="button" aria-haspopup="true" aria-expanded="true" aria-controls="menu1">HTML에 대해</button>
+          <ul  aria-hidden="true" class="nav-sub" id="menu1">
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>HTML5 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>레퍼런스 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>활용예제</a></li>
+          </ul>
+        </li>
+        <li role="none">
+          <button type="button" aria-haspopup="true" aria-expanded="true" aria-controls="menu2">CSS에 대해</button>
+          <ul  aria-hidden="true" class="nav-sub" id="menu2" >
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>HTML5 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>레퍼런스 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>활용예제</a></li>
+          </ul>
+        </li>
+        <li role="none">
+          <button type="button" aria-haspopup="true" aria-expanded="true" aria-controls="menu3">웹표준</button>
+          <ul  aria-hidden="true" class="nav-sub" id="menu3">
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>HTML5 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>레퍼런스 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>활용예제</a></li>
+          </ul>
+        </li>
+        <li role="none">
+          <button type="button" aria-haspopup="true" aria-expanded="true" aria-controls="menu4">웹 접근성</button>
+          <ul  aria-hidden="true" class="nav-sub" id="menu4">
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>HTML5 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>레퍼런스 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>활용예제</a></li>
+          </ul>
+        </li>
+        <li role="none">
+          <button type="button" aria-haspopup="true" aria-expanded="true" aria-controls="menu5">묻고 답하기</button>
+          <ul  aria-hidden="true" class="nav-sub" id="menu5">
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>HTML5 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>레퍼런스 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>활용예제</a></li>
+          </ul>
+        </li>
+        <li role="none">
+          <button type="button" aria-haspopup="true" aria-expanded="true" aria-controls="menu6">자료실</button>
+          <ul  aria-hidden="true" class="nav-sub" id="menu6">
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>HTML5 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>레퍼런스 소개</a></li>
+            <li><a href="/" tabindex="-1"><span aria-hidden="true" class="fas fa-circle-dot"></span>활용예제</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </header>
+  </body>
+</html>
