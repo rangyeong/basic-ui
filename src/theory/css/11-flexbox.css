@@ -1,9 +1,42 @@
 @import url(/theory/css/default.css);
+@import url(/style/theme.css);
+
+
+body{
+  /* font-size: clamp(0.75rem, 3vw, 2.25rem); */
+}
 
 .container{
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
+
+  /* div{
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  } */
+}
+
+.container-flude{
+  margin: 0 auto;
+  /* width: clamp(500px, 80%, 800px); */
+}
+
+.container-fixed{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+.header{
+  height: 70px;
+  block-size: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  gap: 20px;
+  padding: 0 20px;
 
   div{
     background-color: #fff;
@@ -11,45 +44,95 @@
   }
 }
 
-.header{
-  height: 70px;
-  block-size: 70px;
+.logo{
+  /* margin-right: auto;
+  margin-inline-end: auto; */
+  flex-shrink: 0;
 }
+
+.search{
+  flex-basis: 500px;
+  flex-grow: 1;
+}
+
+.login{
+  order: 1;
+  flex-shrink: 0;
+}
+
+
 
 .navigation{
   height: 50px;
   block-size: 50px;
 }
 
+.wrapper{
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 50px;
+  flex: 1 0 0;
+  overflow: auto;
+}
 
-  /* .main 과 .sidebar를 그룹핑Grouping */
-  .wrapper{
+/* .main과 .sidebar를 Grouping */
+.main{
+  flex-basis: 200px;
+  flex-grow: 6;
+  flex-shrink: 0;
+
+  .pagenation-wrap{
     display: flex;
     flex-flow: row nowrap;
-    column-gap: 50px;
-    flex: 1 0 0;
-    overflow: wrap;
-    /* 이게 무슨 뜻인가? */
+    column-gap: 0.5rem;
+  
+  
+    button{
+      /* border-style: none; */
+      background-color: inherit;
+      padding: 0;
+      flex: 0 0 2rem;
+      
+    .fa-angle-right{
+  
+      border-radius: 50%;
+      border-color: var(--dark-blue);
+      border-style: solid;
+    }
+  
+    }
+    
+  ol{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 0;
   }
-
-  .main{
-    flex-basis: 200px;
-    flex-grow: 5;
-    flex-shrink: 0;
-    /* width: 80%; */
-
-    background: yellow;
+  
+  a{
+    padding: 0.5rem 1rem;
+    &.active{
+      color: blue;
+      font-weight: 700;
+    }
   }
-
-  .sidebar{
-    flex-basis: 200px;
-    flex-grow: 2; /*-> 이게 무슨 뜻이지*/
-    flex-shrink: 0;
-    /* width: 20%; */
-    background: pink;
+  
+  li{
+    list-style: none;
+    color: #888;
+    flex: 1 0 auto;
+    text-align: center;
+  
   }
-
-  .footer{
-    height: 50px;
-    block-size: 50px;
   }
+}
+
+.sidebar{
+  flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.footer{
+  height: 50px;
+  block-size: 50px;
+}

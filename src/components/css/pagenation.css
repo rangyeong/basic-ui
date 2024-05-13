@@ -1,0 +1,46 @@
+@import url(/style/theme.css);
+
+.pagenation-wrap{
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+
+
+  button{
+    /* border-style: none; */
+    background-color: inherit;
+    border-style: none;
+    padding: 0;
+    flex: 0 0 2rem;
+    
+  .fa-angle-right{
+
+    border-radius: 50%;
+    border-color: var(--dark-blue);
+    border-style: solid;
+  }
+
+  }
+  
+ol{
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 0;
+}
+
+a{
+  padding: 0.5rem 1rem;
+  &.active{
+    color: blue;
+    font-weight: 700;
+  }
+}
+
+li{
+  list-style: none;
+  color: #888;
+  flex: 1 0 auto;
+  text-align: center;
+
+}
+}

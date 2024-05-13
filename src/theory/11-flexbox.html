@@ -3,25 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>플랙스 박스</title>
+    <title>플렉스 박스</title>
     <link
       href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/style/reset.css" />
     <link rel="stylesheet" href="/theory/css/11-flexbox.css" />
   </head>
   <body>
     <div class="container">
       <div class="yellow">
-        <div class="header">헤더</div>
-      </div>
-      <div class="navigation">내비게이션</div>
-      <div class="wrapper">
-        <div class="main">main content
+        <div class="header container-flude">
+          <div class="logo">로고 영역입니다.</div>
+          <div class="login">로그인 영역입니다.</div>
+          <div class="search">검색영역 영역입니다.</div>
         </div>
-        <div class="sidebar">사이드바</div>
       </div>
-      <div class="footer">푸터</div>
+      <div class="green"><div class="navigation container-flude">내비게이션</div></div>
+      <div class="wrapper container-flude">
+        <div class="main orange">main content
+          <div class="pagenation-wrap">
+            <button><span class="fas fa-angle-left"></span></button>
+            <ol role="none">
+              <li class="page1"><a href="/">1</a></li>
+              <li class="page2"><a href="/">2</a></li>
+              <li class="page3"><a href="/" class="active">3</a></li>
+              <li class="page4"><a href="/">4</a></li>
+              <li class="page5"><a href="/">5</a></li>
+            </ol>
+            <button><span class="fas fa-angle-right"></span></button>
+          </div></div>
+        <div class="sidebar gray">사이드바</div>
+      </div>
+      <div class="skyblue"><div class="footer container-flude">푸터</div></div>
     </div>
   </body>
 </html>
