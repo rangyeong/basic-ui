@@ -1,0 +1,85 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 20px;
+}
+
+.tabs {
+  position: relative;
+  background: yellow;
+  width: 50%;
+  &:has(.is-active){
+    background-color: blue;
+    display: flex;
+  }
+}
+
+
+/* 탭 컴포넌트 */
+.tab {
+  padding: 0.375rem 0.5rem;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 4px 4px 0 0;
+  background-color: #f2f2f2;
+
+  &.is-active {
+    color: orange;
+    border-color: currentColor currentColor white currentColor;
+    background-color: #fff;
+  }
+}
+
+/* 탭 컴포넌트 그룹 */
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* 탭 리스트 */
+.tab-panel{
+  /* display: flex; */
+  display: none;
+  flex-flow: column nowrap;
+  gap: 15px;
+
+  &:has(is-active){
+    display: flex;
+  }
+
+  
+.tab-panel-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .fa-circle-dot {
+    margin-right: 0.5rem;
+  }
+
+  a {
+    /* display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1 1 auto;
+  }
+
+  span{
+    
+    flex: 0 0 auto;
+  }
+}
+
+.tab-more{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+}
+

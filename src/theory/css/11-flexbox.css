@@ -77,62 +77,65 @@ body{
 
 /* .main과 .sidebar를 Grouping */
 .main{
-  flex-basis: 200px;
-  flex-grow: 6;
+  /* flex-grow: 1;
   flex-shrink: 0;
+  flex-basis: 0; */
+  flex: 1 0 0;
+  box-shadow: 0 0 0 1px #000;
+  min-width: 350px;
 
-  .pagenation-wrap{
-    display: flex;
-    flex-flow: row nowrap;
-    column-gap: 0.5rem;
-  
-  
-    button{
-      /* border-style: none; */
-      background-color: inherit;
-      padding: 0;
-      flex: 0 0 2rem;
-      
-    .fa-angle-right{
-  
-      border-radius: 50%;
-      border-color: var(--dark-blue);
-      border-style: solid;
-    }
-  
-    }
-    
-  ol{
-    display: flex;
-    justify-content: space-between;
-    flex: 1 1 0;
+  .pagination{
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
   }
-  
-  a{
-    padding: 0.5rem 1rem;
-    &.active{
-      color: blue;
-      font-weight: 700;
-    }
-  }
-  
-  li{
-    list-style: none;
-    color: #888;
-    flex: 1 0 auto;
-    text-align: center;
-  
-  }
-  }
+
 }
 
 .sidebar{
-  flex-basis: 200px;
-  flex-grow: 1;
+  /* flex-grow: 0;
   flex-shrink: 0;
+  flex-basis: 200px; */
+  flex: 0 0 150px;
 }
 
 .footer{
   height: 50px;
   block-size: 50px;
+}
+
+
+.pagination{
+  --text-color: var(--light-blue);
+  --selected-text-color: var(--dark-blue);
+
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+
+  button{
+    border: 0;
+    background: transparent;
+    padding: 0;
+    flex: 0 0 2rem;
+  
+  }
+
+  div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0;
+    column-gap: 0.125rem;
+    
+    a{
+      color: var(--text-color);
+      padding: 0.5rem;
+
+      &.is-selected{
+        color: var(--dark-blue);
+        font-weight: 700;
+      }
+    }
+  }
 }
