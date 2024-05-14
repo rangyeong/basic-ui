@@ -1,5 +1,6 @@
 @import url(/style/theme.css);
 
+/* 시멘틱요소 css */
 .pagenation-wrap{
   display: flex;
   flex-flow: row nowrap;
@@ -43,4 +44,41 @@ li{
   text-align: center;
 
 }
+}
+
+
+/* div css */
+.pagination{
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: space-between; */
+  padding: 0 20px;
+
+  button{
+    padding: 0;
+    flex: 0 0 1.5rem;
+    border: 0;
+    background-color: transparent;
+  }
+
+  div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex: 1 1 0;
+    column-gap: 1.25rem;
+
+    a{
+      text-decoration: none;
+      padding: 0 0.5rem;
+
+      &.is-active{
+        font-weight: 700;
+        color: blue;
+      }
+    }
+  }
+
+  
 }
