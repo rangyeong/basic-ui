@@ -14,14 +14,27 @@
 
 <body>
   <div class="container">
-    <div class="header yellow">헤더</div>
-    <div class="navigation pink">내비게이션</div>
+    <div class="header yellow">헤더
+      <button type="button" aria-label="메인 메뉴 열기" class="burger-button">
+        <span class="burger-bar burger-bar-top"></span>
+        <span class="burger-bar burger-bar-middle"></span>
+        <span class="burger-bar burger-bar-bottom"></span>
+      </button>
+    </div>
+    <div class="navigation pink">
+      <nav class="menu" aria-label="메인 메뉴">
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록1</a></dv>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록2</a></dv>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록3</a></dv>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록4</a></dv>
+      </nav>
+    </div>
     <div class="main green grid-container">
-      <div class="book skyblue cols-6 sm-cols-4">추천서적</div>
-      <div class="news orange cols-6 sm-cols-8">새소식</div>
-      <div class="board gray cols-12 sm-cols-8">게시판</div>
-      <div class="favorite red cols-6 sm-cols-4">인기 사이트</div>
-      <div class="twitter olivegreen cols-6 sm-cols-12">트위터</div>
+      <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">추천서적</div>
+      <div class="news orange cols-6 sm-cols-8 lg-cols-6">새소식</div>
+      <div class="board gray cols-12 sm-cols-8 lg-cols-4">게시판</div>
+      <div class="favorite red cols-6 sm-cols-4 lg-cols-3">인기 사이트</div>
+      <div class="twitter olivegreen cols-6 sm-cols-12 lg-cols-5">트위터</div>
     </div>
     <div class="footer violet">푸터</div>
   </div>
